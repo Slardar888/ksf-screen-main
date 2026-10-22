@@ -1,21 +1,21 @@
 import { HashRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { MachineProvider } from "@/store";
 
-import LoginPage from "@/pages/LoginPage";
-import NodeIdProbe from "@/pages/__NodeIdProbe";
-import MainMenuPage from "@/pages/MainMenuPage";
-import OperationScreenPage from "@/pages/OperationScreenPage";
-import InjectionSetupPage from "@/pages/InjectionSetupPage";
-import TempSetupPage from "@/pages/TempSetupPage";
-import PresetCountPage from "@/pages/PresetCountPage";
-import JointDetectPage from "@/pages/JointDetectPage";
-import PumpCleanPage from "@/pages/PumpCleanPage";
-import SuperUserPage from "@/pages/SuperUserPage";
-import SystemAdminPage from "@/pages/SystemAdminPage";
-import BindingCardPage from "@/pages/BindingCardPage";
-import AngleMonitorPage from "@/pages/AngleMonitorPage";
-import MesSchedulePage from "@/pages/MesSchedulePage";
-import IoMonitorPage from "@/pages/IoMonitorPage";
+import LoginPage from "./pages/LoginPage";
+import NodeIdProbe from "./pages/__NodeIdProbe";
+import MainMenuPage from "./pages/MainMenuPage";
+import OperationScreenPage from "./pages/OperationScreenPage";
+import InjectionSetupPage from "./pages/InjectionSetupPage";
+import TempSetupPage from "./pages/TempSetupPage";
+import PresetCountPage from "./pages/PresetCountPage";
+import JointDetectPage from "./pages/JointDetectPage";
+import PumpCleanPage from "./pages/PumpCleanPage";
+import SuperUserPage from "./pages/SuperUserPage";
+import SystemAdminPage from "./pages/SystemAdminPage";
+import BindingCardPage from "./pages/BindingCardPage";
+import AngleMonitorPage from "./pages/AngleMonitorPage";
+import MesSchedulePage from "./pages/MesSchedulePage";
+import IoMonitorPage from "./pages/IoMonitorPage";
 import { ROUTES } from "@/components/hmi/shared";
 import { isAuthed } from "@/lib/auth";
 

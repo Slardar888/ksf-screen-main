@@ -11,7 +11,7 @@
  *   KESI_EDITOR_PROJECT 项目 backendID
  *   KESI_EDITOR_ROUTE   项目 route
  */
-const SERVER_URL = "__SERVER_URL__"
+const SERVER_URL = "http://192.168.99.103:3000"
 
 // 直连 Go：/apps/editor/transform；经网关：/rest/apps/editor/transform
 function transformUrl(server: string, route: string) {

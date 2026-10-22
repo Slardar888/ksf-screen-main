@@ -5,8 +5,8 @@ import { defineConfig } from "vite"
 import { kesiEditorTransform } from "./kesi-editor.transform"
 
 // 后端地址：平台拉起 dev server 时注入 KESI_SERVER_URL（同机回环）；
-// __SERVER_URL__ 为创建时脚手架写入的兜底值，供脱离平台独立开发使用
-const SERVER_URL = process.env.KESI_SERVER_URL || "__SERVER_URL__"
+// http://192.168.99.103:3000 为创建时脚手架写入的兜底值，供脱离平台独立开发使用
+const SERVER_URL = process.env.KESI_SERVER_URL || "http://192.168.99.103:3000"
 
 export default defineConfig({
   base: "./",
