@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MES触摸屏系统</title>
+  </head>
+  <!--
+    全局样式全部用 Tailwind className 表达（原本写在 index.css 的 @layer base 里）：
+      h-full               html / body / #root 撑满视口高度
+      overflow-hidden      触摸屏不出现整页滚动
+      bg-hmi-bg font-ui    底色与中文字体（bg-hmi-bg / font-ui 由 @theme 令牌生成）
+      antialiased          字体平滑
+      touch-action / tap-highlight  触摸屏优化：禁用双击缩放与点按高亮
+  -->
+  <body
+    class="h-full overflow-hidden bg-hmi-bg font-ui text-[#e8f2ff] antialiased [touch-action:manipulation] selection:bg-[rgba(56,232,255,0.3)] [&_*]:[-webkit-tap-highlight-color:transparent]"
+  >
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

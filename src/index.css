@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* ==================================================================
+   康师傅 MES 触摸屏 · 设计令牌（Tailwind v4 @theme）
+   ==================================================================
+   本文件**不含任何自定义样式规则**，只保留两样东西：
+     1. Tailwind 的入口 @import；
+     2. @theme 令牌 —— 这是 Tailwind 自身的配置机制，用来生成
+        font-ui / font-tech / text-hmi-cyan / rounded-card 等工具类。
+
+   所有组件样式一律由 Tailwind className 表达，集中在
+   `src/components/hmi/styles.ts`，页面与图元只引用那些类名。
+
+   运行时数据由 <Stage> 以内联样式注入（不是样式规则，是布局数据）：
+     --u           画布单位（当前画布的设计稿 px → 视口像素）
+     --ut          页面外框单位（固定以 1280×800 为基准，标题条用）
+     --title-size  标题字号（以 1280×800 为基准的设计稿 px）
+     --titlebar-h  标题条高度
+   ================================================================== */
+
+@theme {
+  /* ------------------------------ 字体 ------------------------------ */
+  --font-ui:
+    "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Source Han Sans SC",
+    "Microsoft YaHei", "Heiti SC", system-ui, -apple-system, sans-serif;
+  --font-tech:
+    "DIN Alternate", "Bahnschrift", "SF Mono", "JetBrains Mono", "Cascadia Mono",
+    "Consolas", "Menlo", ui-monospace, monospace;
+
+  /* ------------------------------ 底色 ------------------------------ */
+  --color-hmi-void: #03080f;
+  --color-hmi-bg: #04101f;
+  --color-hmi-bg-2: #061428;
+  --color-hmi-bg-3: #08203c;
+
+  /* ------------------------------ 描边 ------------------------------ */
+  --color-hmi-line: rgba(88, 152, 240, 0.22);
+  --color-hmi-line-strong: rgba(88, 172, 255, 0.5);
+
+  /* ------------------------------ 主色 ------------------------------ */
+  --color-hmi-cyan: #38e8ff;
+  --color-hmi-blue: #4d8dff;
+  --color-hmi-blue-deep: #1c5cc8;
+  --color-hmi-violet: #7b6cff;
+
+  /* ---------------------------- 语义色 ---------------------------- */
+  --color-hmi-live: rgb(255, 93, 93);
+  --color-hmi-set: rgb(248, 231, 28);
+  --color-hmi-unit: rgb(109, 193, 254);
+  --color-hmi-ok: #3ddc97;
+  --color-hmi-off: #6b7a90;
+  --color-hmi-warn: #ffb020;
+
+  /* ------------------------------ 圆角 ------------------------------ */
+  --radius-card: 14px;
+  --radius-ctl: 10px;
+}
